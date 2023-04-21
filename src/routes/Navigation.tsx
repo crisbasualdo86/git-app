@@ -8,6 +8,8 @@ import {
     FormikBasicPage,
     FormikComponents,
     FormikYupPage,
+    RegisterFormikPage,
+    DynamicForm,
 } from '../03-forms/pages';
 
 export const Navigation = () => {
@@ -67,6 +69,26 @@ export const Navigation = () => {
                                 Formik Abstractation
                             </NavLink>
                         </li>
+                        <li>
+                            <NavLink
+                                to="/formik-register"
+                                className={({ isActive }) =>
+                                    isActive ? 'nav-active' : ''
+                                }
+                            >
+                                Register Formik
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/dynamic-form"
+                                className={({ isActive }) =>
+                                    isActive ? 'nav-active' : ''
+                                }
+                            >
+                                Dynamic Form
+                            </NavLink>
+                        </li>
                     </ul>
                 </nav>
 
@@ -82,6 +104,11 @@ export const Navigation = () => {
                         path="/formik-abstractation"
                         element={<FormikAbstractation />}
                     />
+                    <Route
+                        path="/formik-register"
+                        element={<RegisterFormikPage />}
+                    />
+                    <Route path="/dynamic-form" element={<DynamicForm />} />
 
                     <Route
                         path="/*"
